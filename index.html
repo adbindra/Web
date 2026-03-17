@@ -1,11 +1,333 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Working</title>
-</head>
-<body>
 
-</body>
-</html>
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Adbindra Corporation | Building Scalable, High-Performance Websites</title>
+<meta content="Adbindra Corporation is a global web development agency specializing in scalable, high-performance websites for startups, SaaS, and enterprises." name="description"/>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#0d6cf2',
+            dark: '#0a0a0a',
+            surface: '#171717',
+            'surface-light': '#262626',
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          borderRadius: {
+            'custom': '8px',
+          }
+        }
+      }
+    }
+  </script>
+<!-- BEGIN: Custom Styles -->
+<style data-purpose="global-styles">
+    body {
+      background-color: #0a0a0a;
+      color: #f5f5f5;
+      font-family: 'Inter', sans-serif;
+    }
+    .glass-nav {
+      background: rgba(10, 10, 10, 0.8);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .service-card {
+      transition: transform 0.3s ease, border-color 0.3s ease;
+    }
+    .service-card:hover {
+      transform: translateY(-5px);
+      border-color: #0d6cf2;
+    }
+    .gradient-text {
+      background: linear-gradient(135deg, #0d6cf2 0%, #60a5fa 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  </style>
+<!-- END: Custom Styles -->
+</head>
+<body class="antialiased">
+<!-- BEGIN: Sticky Header -->
+<header class="fixed top-0 left-0 right-0 z-50 glass-nav" data-purpose="main-navigation">
+<nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+<div class="flex items-center space-x-2">
+<div class="w-8 h-8 bg-primary rounded-custom flex items-center justify-center font-bold text-white">A</div>
+<span class="text-xl font-bold tracking-tight">Adbindra<span class="text-primary">.</span></span>
+</div>
+<div class="hidden md:flex space-x-8 items-center text-sm font-medium">
+<a class="hover:text-primary transition-colors" href="#home">Home</a>
+<a class="hover:text-primary transition-colors" href="#about">About</a>
+<a class="hover:text-primary transition-colors" href="#services">Services</a>
+<a class="hover:text-primary transition-colors" href="#contact">Contact</a>
+<a class="bg-primary hover:bg-blue-600 text-white px-5 py-2 rounded-custom transition-all duration-300" href="mailto:adbindracorporation@gmail.com">Get Started</a>
+</div>
+<!-- Mobile Menu Button (Placeholder for functionality) -->
+<button aria-label="Toggle Menu" class="md:hidden text-white">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 6h16M4 12h16m-7 6h7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</nav>
+</header>
+<!-- END: Sticky Header -->
+<main>
+<!-- BEGIN: Hero Section -->
+<section class="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden" data-purpose="hero-banner" id="home">
+<!-- Background Glow -->
+<div class="absolute top-0 right-0 -translate-y-1/2 translate-x-1/4 w-[500px] h-[500px] bg-primary/20 blur-[120px] rounded-full pointer-events-none"></div>
+<div class="container mx-auto px-6 relative z-10">
+<div class="max-w-4xl mx-auto text-center">
+<span class="inline-block px-4 py-1.5 mb-6 text-sm font-semibold tracking-wider text-primary uppercase bg-primary/10 border border-primary/20 rounded-full">
+            Global Web Development Agency
+          </span>
+<h1 class="text-5xl md:text-7xl font-extrabold leading-tight mb-8">
+            Building <span class="gradient-text">Scalable</span>, High-Performance Websites Worldwide
+          </h1>
+<p class="text-lg md:text-xl text-gray-400 mb-10 max-w-2xl mx-auto leading-relaxed">
+            Adbindra Corporation delivers premium web solutions tailored for growth. From custom SaaS platforms to enterprise WordPress deployments, we build for the future.
+          </p>
+<div class="flex flex-col sm:flex-row justify-center gap-4">
+<a class="px-8 py-4 bg-primary hover:bg-blue-600 text-white font-bold rounded-custom transition-all transform hover:scale-105 shadow-lg shadow-primary/25" href="mailto:adbindracorporation@gmail.com">
+              Contact Us Today
+            </a>
+<a class="px-8 py-4 bg-surface-light hover:bg-neutral-800 text-white font-bold rounded-custom border border-white/10 transition-all" href="#services">
+              Our Services
+            </a>
+</div>
+</div>
+</div>
+</section>
+<!-- END: Hero Section -->
+<!-- BEGIN: About Us -->
+<section class="py-24 bg-surface/50" data-purpose="about-section" id="about">
+<div class="container mx-auto px-6">
+<div class="grid md:grid-cols-2 gap-16 items-center">
+<div class="order-2 md:order-1">
+<div class="relative rounded-custom overflow-hidden border border-white/10 shadow-2xl">
+<img alt="Amandeep Bindra" class="w-full h-auto" src="amandeepbindra.JPG"/>
+<div class="absolute inset-0 bg-gradient-to-t from-dark/80 to-transparent"></div>
+<div class="absolute bottom-6 left-6 flex space-x-4">
+<div class="bg-dark/80 backdrop-blur-md p-4 rounded-custom border border-white/10">
+<p class="text-primary font-bold text-2xl">08+</p>
+<p class="text-xs text-gray-400 uppercase tracking-widest">Global Locations</p>
+</div>
+<div class="bg-dark/80 backdrop-blur-md p-4 rounded-custom border border-white/10">
+<p class="text-primary font-bold text-2xl">99%</p>
+<p class="text-xs text-gray-400 uppercase tracking-widest">Client Success</p>
+</div>
+</div>
+</div>
+</div>
+<div class="order-1 md:order-2">
+<h2 class="text-3xl md:text-4xl font-bold mb-6">Expertise That Bridges Continents</h2>
+<p class="text-gray-400 mb-6 leading-relaxed">
+              Based in India and the USA, Adbindra Corporation combines diverse perspectives with world-class engineering. We specialize in building modern web architectures that don't just look good—they perform under pressure.
+            </p>
+<p class="text-gray-400 mb-8 leading-relaxed">
+              Our commitment goes beyond the initial launch. We offer long-term maintenance and strategic growth planning to ensure your digital presence evolves with your business goals.
+            </p>
+<ul class="space-y-4">
+<li class="flex items-start">
+<span class="w-6 h-6 bg-primary/20 rounded-full flex items-center justify-center mr-3 mt-1">
+<svg class="w-4 h-4 text-primary" fill="currentColor" viewbox="0 0 20 20"><path clip-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" fill-rule="evenodd"></path></svg>
+</span>
+<span>Modern Tech Stack Expertise (React, Laravel, Cloud)</span>
+</li>
+<li class="flex items-start">
+<span class="w-6 h-6 bg-primary/20 rounded-full flex items-center justify-center mr-3 mt-1">
+<svg class="w-4 h-4 text-primary" fill="currentColor" viewbox="0 0 20 20"><path clip-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" fill-rule="evenodd"></path></svg>
+</span>
+<span>Dedicated Maintenance &amp; 24/7 Support</span>
+</li>
+<li class="flex items-start">
+<span class="w-6 h-6 bg-primary/20 rounded-full flex items-center justify-center mr-3 mt-1">
+<svg class="w-4 h-4 text-primary" fill="currentColor" viewbox="0 0 20 20"><path clip-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" fill-rule="evenodd"></path></svg>
+</span>
+<span>Security-First Development Principles</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- END: About Us -->
+<!-- BEGIN: Services -->
+<section class="py-24" data-purpose="services-grid" id="services">
+<div class="container mx-auto px-6">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-5xl font-bold mb-4">Comprehensive Solutions</h2>
+<p class="text-gray-400 max-w-2xl mx-auto">From rapid prototyping to complex enterprise applications, we offer a full suite of web development services.</p>
+</div>
+<div class="grid md:grid-cols-3 gap-8">
+<!-- Service 1: WordPress -->
+<div class="service-card p-8 bg-surface rounded-custom border border-white/5" data-purpose="service-item">
+<div class="w-12 h-12 bg-primary/10 rounded-custom flex items-center justify-center mb-6">
+<svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+<h3 class="text-xl font-bold mb-3">WordPress &amp; Elementor</h3>
+<p class="text-gray-400 text-sm leading-relaxed">High-converting, visually stunning websites built with the world's most popular CMS, optimized for speed.</p>
+</div>
+<!-- Service 2: Laravel -->
+<div class="service-card p-8 bg-surface rounded-custom border border-white/5" data-purpose="service-item">
+<div class="w-12 h-12 bg-primary/10 rounded-custom flex items-center justify-center mb-6">
+<svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+<h3 class="text-xl font-bold mb-3">Laravel Development</h3>
+<p class="text-gray-400 text-sm leading-relaxed">Robust, secure back-end systems and custom web applications built on the powerful Laravel framework.</p>
+</div>
+<!-- Service 3: Maintenance -->
+<div class="service-card p-8 bg-surface rounded-custom border border-white/5" data-purpose="service-item">
+<div class="w-12 h-12 bg-primary/10 rounded-custom flex items-center justify-center mb-6">
+<svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+<h3 class="text-xl font-bold mb-3">Long-term Maintenance</h3>
+<p class="text-gray-400 text-sm leading-relaxed">Ensuring your site stays updated, secure, and fast with our dedicated monthly maintenance packages.</p>
+</div>
+<!-- Service 4: Travel Solutions -->
+<div class="service-card p-8 bg-surface rounded-custom border border-white/5" data-purpose="service-item">
+<div class="w-12 h-12 bg-primary/10 rounded-custom flex items-center justify-center mb-6">
+<svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+<h3 class="text-xl font-bold mb-3">Travel &amp; Logistics</h3>
+<p class="text-gray-400 text-sm leading-relaxed">Specialized booking engines, dynamic pricing systems, and portal development for travel agencies.</p>
+</div>
+<!-- Service 5: SaaS/Startup -->
+<div class="service-card p-8 bg-surface rounded-custom border border-white/5" data-purpose="service-item">
+<div class="w-12 h-12 bg-primary/10 rounded-custom flex items-center justify-center mb-6">
+<svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+<h3 class="text-xl font-bold mb-3">Startup &amp; SaaS</h3>
+<p class="text-gray-400 text-sm leading-relaxed">End-to-end MVP development for startups looking to scale fast and secure venture funding.</p>
+</div>
+<!-- Service 6: Custom Solutions -->
+<div class="service-card p-8 bg-surface rounded-custom border border-white/5" data-purpose="service-item">
+<div class="w-12 h-12 bg-primary/10 rounded-custom flex items-center justify-center mb-6">
+<svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+<h3 class="text-xl font-bold mb-3">Custom Enterprise</h3>
+<p class="text-gray-400 text-sm leading-relaxed">Unique digital challenges met with bespoke technical solutions designed for internal business processes.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- END: Services -->
+<!-- BEGIN: Why Choose Us -->
+<section class="py-24 bg-surface/30" data-purpose="why-choose-us">
+<div class="container mx-auto px-6">
+<div class="max-w-5xl mx-auto bg-primary/5 rounded-3xl p-12 border border-primary/20 relative overflow-hidden">
+<div class="absolute -top-24 -right-24 w-64 h-64 bg-primary/10 blur-[80px] rounded-full"></div>
+<div class="grid md:grid-cols-2 gap-12 relative z-10">
+<div>
+<h2 class="text-3xl font-bold mb-6">Why Partner With Adbindra?</h2>
+<p class="text-gray-400 mb-8">We don't just write code; we build business tools. Our focus remains on the "Three Pillars of Excellence":</p>
+<div class="space-y-6">
+<div class="flex items-center space-x-4">
+<div class="flex-shrink-0 w-10 h-10 bg-primary text-white flex items-center justify-center rounded-full font-bold">1</div>
+<div>
+<h4 class="font-bold">Performance Focus</h4>
+<p class="text-xs text-gray-500">Every site is optimized for &lt; 2s load time.</p>
+</div>
+</div>
+<div class="flex items-center space-x-4">
+<div class="flex-shrink-0 w-10 h-10 bg-primary text-white flex items-center justify-center rounded-full font-bold">2</div>
+<div>
+<h4 class="font-bold">Extreme Reliability</h4>
+<p class="text-xs text-gray-500">99.9% uptime and zero-security breach record.</p>
+</div>
+</div>
+<div class="flex items-center space-x-4">
+<div class="flex-shrink-0 w-10 h-10 bg-primary text-white flex items-center justify-center rounded-full font-bold">3</div>
+<div>
+<h4 class="font-bold">Transparent Communication</h4>
+<p class="text-xs text-gray-500">Bi-weekly updates and clear project milestones.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-center">
+<div class="text-center">
+<div class="text-6xl font-black text-primary mb-2">100+</div>
+<p class="text-lg font-medium text-gray-300 uppercase tracking-widest">Projects Delivered</p>
+<hr class="my-8 border-white/10"/>
+<div class="text-6xl font-black text-primary mb-2">24h</div>
+<p class="text-lg font-medium text-gray-300 uppercase tracking-widest">Typical Response Time</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: Why Choose Us -->
+<!-- BEGIN: Contact Section -->
+<section class="py-24" data-purpose="contact-section" id="contact">
+<div class="container mx-auto px-6">
+<div class="max-w-4xl mx-auto text-center">
+<h2 class="text-4xl md:text-5xl font-bold mb-8">Ready to Start Your Project?</h2>
+<p class="text-xl text-gray-400 mb-12">Whether you have a detailed specification or just an idea, our team is ready to help you navigate the digital landscape.</p>
+<div class="bg-surface rounded-3xl p-10 border border-white/5 shadow-2xl">
+<div class="mb-8">
+<p class="text-gray-500 uppercase tracking-widest text-sm mb-2">Direct Contact</p>
+<a class="text-2xl md:text-4xl font-bold text-primary hover:underline" href="mailto:adbindracorporation@gmail.com">
+                adbindracorporation@gmail.com
+              </a>
+</div>
+<div class="flex flex-col items-center">
+<a class="inline-flex items-center justify-center space-x-3 px-10 py-5 bg-primary hover:bg-blue-600 text-white font-bold rounded-custom transition-all text-lg mb-6" href="mailto:adbindracorporation@gmail.com">
+<svg class="w-6 h-6" fill="currentColor" viewbox="0 0 20 20"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path></svg>
+<span>Email Us Now</span>
+</a>
+<p class="text-gray-500 italic">Guaranteed response within 24 hours.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: Contact Section -->
+</main>
+<!-- BEGIN: Footer -->
+<footer class="bg-dark border-t border-white/5 py-12" data-purpose="site-footer">
+<div class="container mx-auto px-6">
+<div class="flex flex-col md:flex-row justify-between items-center space-y-8 md:space-y-0">
+<div class="flex items-center space-x-2">
+<div class="w-8 h-8 bg-primary rounded-custom flex items-center justify-center font-bold text-white">A</div>
+<span class="text-xl font-bold tracking-tight">Adbindra<span class="text-primary">.</span></span>
+</div>
+<div class="flex space-x-8 text-sm text-gray-400">
+<a class="hover:text-white transition-colors" href="#home">Home</a>
+<a class="hover:text-white transition-colors" href="#about">About</a>
+<a class="hover:text-white transition-colors" href="#services">Services</a>
+<a class="hover:text-white transition-colors" href="#contact">Contact</a>
+</div>
+<div class="text-sm text-gray-500">
+          © 2024 Adbindra Corporation. All rights reserved.
+        </div>
+</div>
+</div>
+</footer>
+<!-- END: Footer -->
+<!-- BEGIN: Interactions -->
+<script data-purpose="smooth-scroll">
+    // Simple smooth scroll implementation if needed for older browsers or enhanced control
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+<!-- END: Interactions -->
+</body></html>
