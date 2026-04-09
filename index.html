@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
-<html class="scroll-smooth" lang="en"><head>
+<html class="scroll-smooth" lang="en">
+<head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Adbindra Corporation | Building Scalable, High-Performance Websites</title>
@@ -74,12 +75,18 @@
 <a class="bg-primary hover:bg-blue-600 text-white px-5 py-2 rounded-custom transition-all duration-300" href="mailto:adbindracorporation@gmail.com">Get Started</a>
 </div>
 <!-- Mobile Menu Button (Placeholder for functionality) -->
-<button aria-label="Toggle Menu" class="md:hidden text-white">
+<button id="menu-btn" aria-label="Toggle Menu" class="md:hidden text-white"><!-- Mobile Menu -->
 <svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
 <path d="M4 6h16M4 12h16m-7 6h7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
 </svg>
 </button>
 </nav>
+<div id="mobile-menu" class="pt-4 hidden md:hidden px-6 pb-4 space-y-4 bg-surface-light shadow-lg transition-all duration-300">  
+  <a href="#home" class="block">Home</a>
+  <a href="#about" class="block">About</a>
+  <a href="#services" class="block">Services</a>
+  <a href="#contact" class="block">Contact</a>
+</div>  
 </header>
 <!-- END: Sticky Header -->
 <main>
@@ -116,7 +123,7 @@
 <div class="grid md:grid-cols-2 gap-16 items-center">
 <div class="order-2 md:order-1">
 <div class="relative rounded-custom overflow-hidden border border-white/10 shadow-2xl">
-<img alt="Amandeep Bindra" class="w-full h-auto" src="amandeepbindra.jpg"/>
+<img alt="Amandeep Bindra" class="w-full h-auto" src="amandeepbindra.JPG"/>
 <div class="absolute inset-0 bg-gradient-to-t from-dark/80 to-transparent"></div>
 <div class="absolute bottom-6 left-6 flex space-x-4">
 <div class="bg-dark/80 backdrop-blur-md p-4 rounded-custom border border-white/10">
@@ -279,6 +286,9 @@
 <div class="bg-surface rounded-3xl p-10 border border-white/5 shadow-2xl">
 <div class="mb-8">
 <p class="text-gray-500 uppercase tracking-widest text-sm mb-2">Direct Contact</p>
+<a class="text-2xl md:text-4xl font-bold text-primary hover:underline" href="mailto:adbindracorporation@gmail.com">
+                adbindracorporation@gmail.com
+              </a>
 </div>
 <div class="flex flex-col items-center">
 <a class="inline-flex items-center justify-center space-x-3 px-10 py-5 bg-primary hover:bg-blue-600 text-white font-bold rounded-custom transition-all text-lg mb-6" href="mailto:adbindracorporation@gmail.com">
@@ -326,5 +336,14 @@
       });
     });
   </script>
+
+<script>
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  menuBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+</script>  
 <!-- END: Interactions -->
 </body></html>
